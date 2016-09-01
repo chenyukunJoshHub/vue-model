@@ -1,0 +1,146 @@
+{
+    "entry": {
+        "app": [
+            "./build/dev-client",
+            "./src/main.js"
+        ]
+    },
+    "output": {
+        "path": "/Users/apppe/Documents/MacWork/vue-model/dist",
+        "publicPath": "/",
+        "filename": "[name].js",
+        "chunkFilename": "[id][chunkhash].js"
+    },
+    "resolve": {
+        "extensions": [
+            "",
+            ".js",
+            ".vue"
+        ],
+        "fallback": [
+            "/Users/apppe/Documents/MacWork/vue-model/node_modules"
+        ],
+        "alias": {
+            "src": "/Users/apppe/Documents/MacWork/vue-model/src",
+            "assets": "/Users/apppe/Documents/MacWork/vue-model/src/assets",
+            "components": "/Users/apppe/Documents/MacWork/vue-model/src/components",
+            "vux-components": "vux/src/components/"
+        }
+    },
+    "resolveLoader": {
+        "fallback": [
+            "/Users/apppe/Documents/MacWork/vue-model/node_modules"
+        ]
+    },
+    "module": {
+        "loaders": [
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader!less-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader!sass-loader?indentedSyntax"
+            },
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader!sass-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader!stylus-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue-style-loader!css-loader!stylus-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue"
+            },
+            {
+                "test": {},
+                "loader": "babel",
+                "include": "/Users/apppe/Documents/MacWork/vue-model",
+                "exclude": {}
+            },
+            {
+                "test": {},
+                "loader": "json"
+            },
+            {
+                "test": {},
+                "loader": "vue-html"
+            },
+            {
+                "test": {},
+                "loader": "url",
+                "query": {
+                    "limit": 10000,
+                    "name": "static/img/[name].[hash:7].[ext]"
+                }
+            },
+            {
+                "test": {},
+                "loader": "url",
+                "query": {
+                    "limit": 10000,
+                    "name": "static/fonts/[name].[hash:7].[ext]"
+                }
+            },
+            {
+                "test": {},
+                "loader": "babel"
+            }
+        ]
+    },
+    "vue": {
+        "loaders": {
+            "css": "vue-style-loader!css-loader",
+            "postcss": "vue-style-loader!css-loader",
+            "less": "vue-style-loader!css-loader!less-loader",
+            "sass": "vue-style-loader!css-loader!sass-loader?indentedSyntax",
+            "scss": "vue-style-loader!css-loader!sass-loader",
+            "stylus": "vue-style-loader!css-loader!stylus-loader",
+            "styl": "vue-style-loader!css-loader!stylus-loader"
+        }
+    },
+    "devtool": "#eval-source-map",
+    "plugins": [
+        {
+            "definitions": {
+                "process.env": {
+                    "NODE_ENV": "\"development\""
+                }
+            }
+        },
+        {},
+        {},
+        {},
+        {
+            "options": {
+                "template": "index.html",
+                "filename": "index.html",
+                "hash": false,
+                "inject": true,
+                "compile": true,
+                "favicon": false,
+                "minify": false,
+                "cache": true,
+                "showErrors": true,
+                "chunks": "all",
+                "excludeChunks": [],
+                "title": "Webpack App",
+                "xhtml": false
+            }
+        }
+    ]
+}

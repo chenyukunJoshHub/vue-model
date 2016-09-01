@@ -1,0 +1,173 @@
+{
+    "entry": {
+        "app": "./src/main.js"
+    },
+    "output": {
+        "path": "/Users/apppe/Documents/MacWork/html5/vue0829/dist",
+        "publicPath": "/",
+        "filename": "static/js/[name].[chunkhash].js",
+        "chunkFilename": "static/js/[id].[chunkhash].js"
+    },
+    "resolve": {
+        "extensions": [
+            "",
+            ".js",
+            ".vue"
+        ],
+        "fallback": [
+            "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules"
+        ],
+        "alias": {
+            "src": "/Users/apppe/Documents/MacWork/html5/vue0829/src",
+            "assets": "/Users/apppe/Documents/MacWork/html5/vue0829/src/assets",
+            "components": "/Users/apppe/Documents/MacWork/html5/vue0829/src/components"
+        }
+    },
+    "resolveLoader": {
+        "fallback": [
+            "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules"
+        ]
+    },
+    "module": {
+        "loaders": [
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader"
+            },
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader"
+            },
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!less-loader"
+            },
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!sass-loader?indentedSyntax"
+            },
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!sass-loader"
+            },
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!stylus-loader"
+            },
+            {
+                "test": {},
+                "loader": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!stylus-loader"
+            },
+            {
+                "test": {},
+                "loader": "vue"
+            },
+            {
+                "test": {},
+                "loader": "babel",
+                "include": "/Users/apppe/Documents/MacWork/html5/vue0829",
+                "exclude": {}
+            },
+            {
+                "test": {},
+                "loader": "json"
+            },
+            {
+                "test": {},
+                "loader": "vue-html"
+            },
+            {
+                "test": {},
+                "loader": "url",
+                "query": {
+                    "limit": 10000,
+                    "name": "static/img/[name].[hash:7].[ext]"
+                }
+            },
+            {
+                "test": {},
+                "loader": "url",
+                "query": {
+                    "limit": 10000,
+                    "name": "static/fonts/[name].[hash:7].[ext]"
+                }
+            }
+        ]
+    },
+    "vue": {
+        "loaders": {
+            "css": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader",
+            "postcss": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader",
+            "less": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!less-loader",
+            "sass": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!sass-loader?indentedSyntax",
+            "scss": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!sass-loader",
+            "stylus": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!stylus-loader",
+            "styl": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader!stylus-loader"
+        }
+    },
+    "devtool": false,
+    "plugins": [
+        {
+            "definitions": {
+                "process.env": {
+                    "NODE_ENV": "\"production\""
+                }
+            }
+        },
+        {
+            "options": {
+                "compress": {
+                    "warnings": false
+                }
+            }
+        },
+        {},
+        {
+            "filename": "static/css/[name].[contenthash].css",
+            "options": {},
+            "id": 1
+        },
+        {
+            "options": {
+                "template": "index.html",
+                "filename": "/Users/apppe/Documents/MacWork/html5/vue0829/dist/index.html",
+                "hash": false,
+                "inject": true,
+                "compile": true,
+                "favicon": false,
+                "minify": {
+                    "removeComments": true,
+                    "collapseWhitespace": true,
+                    "removeAttributeQuotes": true
+                },
+                "cache": true,
+                "showErrors": true,
+                "chunks": "all",
+                "excludeChunks": [],
+                "title": "Webpack App",
+                "xhtml": false,
+                "chunksSortMode": "dependency"
+            }
+        },
+        {
+            "chunkNames": "vendor",
+            "ident": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0"
+        },
+        {
+            "chunkNames": "manifest",
+            "selectedChunks": [
+                "vendor"
+            ],
+            "ident": "/Users/apppe/Documents/MacWork/html5/vue0829/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1"
+        },
+        {
+            "asset": "[path].gz[query]",
+            "compressionOptions": {
+                "level": 9
+            },
+            "test": {},
+            "threshold": 10240,
+            "minRatio": 0.8
+        }
+    ]
+}
