@@ -11,7 +11,39 @@
       <meta name="apple-mobile-web-app-title" content="vue示例">
   </head>
   <body>
-      <div id="app"></div>
-    <!-- built files will be auto injected -->
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script>
+      window.onload = function(){
+          if(isWeiXin()){
+              alert('11')
+          }else{
+              alert('请在微信客户端打开')
+          }
+      }
+      function isWeiXin(){
+          var ua = window.navigator.userAgent.toLowerCase();
+          if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+              return true;
+          }else{
+              return false;
+          }
+      }
+  </script>
+  <script type="text/javascript">
+      (function (doc, win) {
+          var docEl = doc.documentElement,
+                  resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                  recalc = function () {
+                      var clientWidth = docEl.clientWidth;
+                      if (!clientWidth) return;
+                      docEl.style.fontSize = 50 * (clientWidth / 750) + 'px';
+                  };
+
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+  </script>
   </body>
 </html>
