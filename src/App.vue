@@ -114,6 +114,9 @@ route: {
 }
 </script>
 
-<style>
+<style lang="less">
 @import '~vux/dist/vux.css';
+#josh a{
+    font-size: 1rem;
+}
 </style>

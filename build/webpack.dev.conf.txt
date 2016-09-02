@@ -113,6 +113,16 @@
             "styl": "vue-style-loader!css-loader!stylus-loader"
         }
     },
+    "babel": {
+        "presets": [
+            "es2015",
+            "stage-2"
+        ],
+        "plugins": [
+            "transform-runtime"
+        ],
+        "comments": false
+    },
     "devtool": "#eval-source-map",
     "plugins": [
         {

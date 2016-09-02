@@ -5,6 +5,8 @@
   "author": "chenyukun <chenyukun_cyk@126.com>",
   "private": true,
   "scripts": {
+    "start": "npm run kill && pm2 start pm2.config.json",
+    "kill": "pm2 stop pm2.config.json && pm2 delete pm2.config.json",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "test": ""

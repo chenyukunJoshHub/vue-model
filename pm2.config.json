@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name"         : "vue-model",
+      "script"       : "node",
+      "args"         : ["build/dev-server.js"],
+      "watch"        : ["./src","./mockserver"],
+      "ignore-watch" : [""],
+      "node_args"    : "",
+      "merge_logs"   : true,
+      "env": {
+        "NODE_ENV"   : "development"
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+//TODO: HTTP 配置
 export default ((loading, dialog)=>{
     let Loading = loading || function(){},
         Dialog =  dialog || function(){}
