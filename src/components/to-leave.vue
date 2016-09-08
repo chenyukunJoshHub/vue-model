@@ -16,7 +16,7 @@ export default {
         getters: {
             getLeave:getLeave,
             getOverall: getOverall,
-            getoverall:({OverAll})=>OverAll.data
+            getoverall:({OverAll}) => OverAll.data
         }
     },
     data () {

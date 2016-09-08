@@ -9,10 +9,20 @@
         <a v-link="{ path: '/leave?user=josh'}">Go to leave</a>
   </p>
 
+
+    {{* one}}
+    <br>
+    {{ one.split('').reverse().join('') }}
+    <br>
+    {{fullName}}
+
+    <partial name="my"></partial>
+
   <div>
       <tabbar>
           <tabbar-item link="http://www.baidu.com">
-              <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
+              <!-- // 值解析为一个字面字符串而不是一个表达式 -->
+              <img slot="icon" :src.literal="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
               <span slot="label">Wechat</span>
           </tabbar-item>
           <tabbar-item show-dot>
@@ -60,6 +70,32 @@ components: {
     Tabbar,
     TabbarItem
 },
+data (){
+    return {
+        one:"* 只绑定一次",
+        firstName:1,
+        lastName:2,
+        fullName:'11'
+    }
+},
+partials:{
+    'my':'<p>This is a partial!{{fullName}}</p>'
+},
+
+computed: {
+    fullName: {
+        // getter
+        get: function () {
+            return this.firstName + ' ' + this.lastName
+        },
+        // setter 相对watch
+        set: function (newValue) {
+            var names = newValue.split(' ')
+            this.firstName = names[0]
+            this.lastName = names[names.length - 1]
+        }
+    }
+},
 ready () {
     console.log(this.$route.path)
     console.log(this.$route.params)
@@ -67,6 +103,8 @@ ready () {
     console.log(this.$route.router)
     console.log(this.$route.matched)
     console.log(this.$route.name)
+
+    this.fullName = "josh set"
 },
 
 // *** 路由 钩子
@@ -118,5 +156,6 @@ route: {
 @import '~vux/dist/vux.css';
 #josh a{
     font-size: 1rem;
+    display: block;
 }
 </style>
