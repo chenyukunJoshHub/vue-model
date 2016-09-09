@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-      <h1>{{ msg }}--{{getLeave.name}} -- {{getOverall}} --- {{getoverall}}</h1>
+      <h1>{{ msg }}--{{getLeave.name}} -- {{getOverall}}</h1>
       <p>当前路径: {{$route.path}}</p>
       <p>当前路由参数: {{$route.params | json}}</p>
   </div>
@@ -15,8 +15,8 @@ export default {
         },
         getters: {
             getLeave:getLeave,
-            getOverall: getOverall,
-            getoverall:({OverAll}) => OverAll.data
+            getOverall: getOverall
+//            getoverall:({OverAll}) => OverAll.data
         }
     },
     data () {

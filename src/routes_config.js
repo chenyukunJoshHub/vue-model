@@ -2,7 +2,7 @@
 import Hello from './components/Hello.vue'
 import ToLogin from './components/to-login.vue'
 import ToMain from './components/to-main.vue'
-import ToLeave from './components/to-leave.vue'
+import Transition from './components/transitions.vue'
 
 module.exports = function(router){
 
@@ -27,7 +27,7 @@ module.exports = function(router){
                     // 当匹配到 /foo 时，这个组件会被渲染到 Foo 组件的 <router-view> 中。
                     // 为了简便，这里使用了一个组件的定义
                     component: {
-                        template: '<p>Default sub view for Foo</p>'
+                        template: '<p>我是二级子路由 目录 /</p>'
                     }
                 },
             }
@@ -52,6 +52,11 @@ module.exports = function(router){
             component: function(resolve) {
                 require(['./components/to-leave.vue'], resolve)
             }
+        },
+        '/transition': {
+            title: '动画',
+            name:'transition',
+            component: Transition
         }
     })
 
@@ -59,9 +64,8 @@ module.exports = function(router){
         document.title=transition.to.title
     })
 
-//为路由定义全局重定向规则，将任意未匹配路径重定向到/home页面
-//router.redirect({
-//    '*': '/hello'
-//})
-
+    //为路由定义全局重定向规则，将任意未匹配路径重定向到/home页面
+    router.redirect({
+        '*': '/hello'
+    })
 }

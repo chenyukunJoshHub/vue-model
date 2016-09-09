@@ -24,7 +24,10 @@ Resource(function(data){
     }
 })
 
-export var router = new VueRouter({
+//** 引入动画
+require('./components/utils/transitions');
+
+var router = new VueRouter({
     hashbang: false,
     history: true,
     root: '/',

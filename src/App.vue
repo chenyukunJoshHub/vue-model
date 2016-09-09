@@ -7,13 +7,14 @@
         <a v-link="{ path: '/main/1/josh/2' }">Go to main</a>
         <!--<a v-link="{ name: 'main', params: { id: 123}}">Go to main</a>-->
         <a v-link="{ path: '/leave?user=josh'}">Go to leave</a>
+        <a v-link="{ name:'transition'}">Go transition</a>
   </p>
 
 
-    {{* one}}
-    <br>
-    {{ one.split('').reverse().join('') }}
-    <br>
+    <!--{{* one}}-->
+    <!--<br>-->
+    <!--{{ one.split('').reverse().join('') }}-->
+    <!--<br>-->
     {{fullName}}
 
     <partial name="my"></partial>
@@ -43,7 +44,6 @@
   <div>
       <group>
           <cell title="vue" value="cool"></cell>
-          <cell title="vue" value="cool"></cell>
       </group>
   </div>
 
@@ -55,7 +55,6 @@
 
 //TODO: 创建根组件
 import store from './vuex/store' // import 我们刚刚创建的 store
-
 
 //** vux
 import Group from 'vux-components/group'
@@ -79,7 +78,7 @@ data (){
     }
 },
 partials:{
-    'my':'<p>This is a partial!{{fullName}}</p>'
+    'my':'<p>This is a partial!--{{fullName}}</p>'
 },
 
 computed: {
@@ -152,10 +151,13 @@ route: {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import '~vux/dist/vux.css';
-#josh a{
-    font-size: 1rem;
+#josh{
+    a{
+        display: block;
+    }
+    font-size: 0.6rem;
     display: block;
 }
 </style>
