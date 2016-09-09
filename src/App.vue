@@ -7,12 +7,23 @@
         <a v-link="{ path: '/main/1/josh/2' }">Go to main</a>
         <!--<a v-link="{ name: 'main', params: { id: 123}}">Go to main</a>-->
         <a v-link="{ path: '/leave?user=josh'}">Go to leave</a>
+        <a v-link="{ name:'transition'}">Go transition</a>
   </p>
+
+
+    <!--{{* one}}-->
+    <!--<br>-->
+    <!--{{ one.split('').reverse().join('') }}-->
+    <!--<br>-->
+    {{fullName}}
+
+    <partial name="my"></partial>
 
   <div>
       <tabbar>
           <tabbar-item link="http://www.baidu.com">
-              <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
+              <!-- // 值解析为一个字面字符串而不是一个表达式 -->
+              <img slot="icon" :src.literal="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
               <span slot="label">Wechat</span>
           </tabbar-item>
           <tabbar-item show-dot>
@@ -33,7 +44,6 @@
   <div>
       <group>
           <cell title="vue" value="cool"></cell>
-          <cell title="vue" value="cool"></cell>
       </group>
   </div>
 
@@ -45,7 +55,6 @@
 
 //TODO: 创建根组件
 import store from './vuex/store' // import 我们刚刚创建的 store
-
 
 //** vux
 import Group from 'vux-components/group'
@@ -60,6 +69,32 @@ components: {
     Tabbar,
     TabbarItem
 },
+data (){
+    return {
+        one:"* 只绑定一次",
+        firstName:1,
+        lastName:2,
+        fullName:'11'
+    }
+},
+partials:{
+    'my':'<p>This is a partial!--{{fullName}}</p>'
+},
+
+computed: {
+    fullName: {
+        // getter
+        get: function () {
+            return this.firstName + ' ' + this.lastName
+        },
+        // setter 相对watch
+        set: function (newValue) {
+            var names = newValue.split(' ')
+            this.firstName = names[0]
+            this.lastName = names[names.length - 1]
+        }
+    }
+},
 ready () {
     console.log(this.$route.path)
     console.log(this.$route.params)
@@ -67,6 +102,8 @@ ready () {
     console.log(this.$route.router)
     console.log(this.$route.matched)
     console.log(this.$route.name)
+
+    this.fullName = "josh set"
 },
 
 // *** 路由 钩子
@@ -114,9 +151,13 @@ route: {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import '~vux/dist/vux.css';
-#josh a{
-    font-size: 1rem;
+#josh{
+    a{
+        display: block;
+    }
+    font-size: 0.6rem;
+    display: block;
 }
 </style>

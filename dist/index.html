@@ -1,1 +1,27 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><title>vue0829</title><link href=/static/css/app.bbb1c2afa298263341c37b5088755611.css rel=stylesheet></head><body><app></app><script type=text/javascript src=/static/js/manifest.4b23f7bca16b2270b289.js></script><script type=text/javascript src=/static/js/vendor.030a8ef09fce43008674.js></script><script type=text/javascript src=/static/js/app.dcdac6000e98293aac1a.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name=viewport><meta name=msapplication-tap-highlight content=no><meta content="telephone=no" name=format-detection><meta content="email=no" name=format-detection><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=apple-mobile-web-app-title content=vue示例><link href=/static/css/app.232d58bf00216c2513b2f8ba8d5b976b.css rel=stylesheet></head><body><div id=app></div><script>window.onload = function(){
+          if(isWeiXin()){
+              alert('11')
+          }else{
+              console.log('请在微信客户端打开')
+          }
+      }
+      function isWeiXin(){
+          var ua = window.navigator.userAgent.toLowerCase();
+          if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+              return true;
+          }else{
+              return false;
+          }
+      }</script><script>(function (doc, win) {
+          var docEl = doc.documentElement,
+                  resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                  recalc = function () {
+                      var clientWidth = docEl.clientWidth;
+                      if (!clientWidth) return;
+                      docEl.style.fontSize = 50 * (clientWidth / 750) + 'px';
+                  };
+
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);</script><script type=text/javascript src=/static/js/manifest.f72c5ff89da619aa3c15.js></script><script type=text/javascript src=/static/js/vendor.d6d4e50fe062a658f14a.js></script><script type=text/javascript src=/static/js/app.bb7b10bf1b4e513a3105.js></script></body></html>

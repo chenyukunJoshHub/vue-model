@@ -29,11 +29,15 @@ pm2 logs
 
 ##目录结构
 build --  webpack打包程序
-config --  index.js   proxyTable 修改反代理
-mockserver -- nodejs 模拟后端post接口  本地开发前调试
-src -- vue文件 vuex + vux +  vue-router + 
-static -- 不想被编译的文件放这里,群里朋友说的
-pm2.config.json -- pm2进程管理
 
+config --  index.js   proxyTable 修改反代理
+
+mockserver -- nodejs 模拟后端post接口  本地开发前调试
+
+src -- vue文件 vuex + vux +  vue-router + 
+
+static -- 不想被编译的文件放这里,群里朋友说的
+
+pm2.config.json -- pm2进程管理
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
